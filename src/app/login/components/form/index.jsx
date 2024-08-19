@@ -54,27 +54,27 @@ export function FormLogin({ isRegister }) {
 
         //     const response = await fetch('archweb-dev.eba-dmzpwwpv.us-east-2.elasticbeanstalk.com/auth/register', userData)
         //     console.log(response);
-        const userData = {
-            FirstName: "Gabriel",
-            LastName: "Elias",
-            Email: "gabrielelias@gmail.com",
-            password: "teste99"
-        }
+        // const userData = {
+        //     FirstName: "Gabriel",
+        //     LastName: "Elias",
+        //     Email: "gabrielelias@gmail.com",
+        //     password: "teste99"
+        // }
 
-        const formData = new FormData()
-        formData.append('user', userData)
-        console.log(userData);
+        // const formData = new FormData()
+        // formData.append('user', userData)
+        // console.log(userData);
 
-        const response = await fetch("http://archweb-dev.eba-dmzpwwpv.us-east-2.elasticbeanstalk.com/auth/register",
-            {
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                },
-                method: 'POST',
-                body: JSON.stringify(userData)
-            })
-        console.log(response);
+        // const response = await fetch("http://archweb-dev.eba-dmzpwwpv.us-east-2.elasticbeanstalk.com/auth/register",
+        //     {
+        //         headers: {
+        //             'Accept': 'application/json',
+        //             'Content-Type': 'application/json'
+        //         },
+        //         method: 'POST',
+        //         body: JSON.stringify(userData)
+        //     })
+        // console.log(response);
     }
 
     const { status, data } = useSession()

@@ -1,5 +1,6 @@
 import { AuthProvider } from "@/providers/auth";
 import "./globals.css";
+import { Header } from "@/components/Header";
 
 
 export const metadata = {
@@ -12,6 +13,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <AuthProvider>
+          <Header />
           {children}
         </AuthProvider>
       </body>
