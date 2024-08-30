@@ -7,6 +7,7 @@ import Image from 'next/image'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import SearchIcon from '@mui/icons-material/Search';
 import { useEffect, useState } from 'react';
+import AvatarImage from '../Avatar'
 
 export function Header() {
     const [top, setTop] = useState(true)
@@ -26,7 +27,7 @@ export function Header() {
     return (
         <header className={` ${styles.header} ${!top ? styles.fixed : styles.background}`}>
             <div className={styles.wrap_header}>
-                <nav className={styles.nav}>
+                <div>
                     <Link href="/">
                         <Image
                             width={35}
@@ -36,20 +37,31 @@ export function Header() {
                             priority
                         />
                     </Link>
+                </div>
+                <nav className={styles.nav}>
+                    <Link href="/">
+                        Architect
+                    </Link>
+                    <Link href="/architect/project/9">
+                        Project
+                    </Link>
                 </nav>
 
-                <div className={styles.search} tabindex="0" >
-                    <input type='text' />
-                    <button className={styles.icon}>
-                        <SearchIcon sx={{ width: '20px', color: '#fff' }} />
-                    </button>
+                <div className={styles.search_input}>
+                    <div className={styles.search}>
+                        <input type='text' />
+                        <button className={styles.icon}>
+                            <SearchIcon sx={{ width: '20px', color: '#fff' }} />
+                        </button>
+                    </div>
+                    <AvatarImage name={'Gabriel Matte Elias'} width={34} height={34} />
                 </div>
 
-                <div className={styles.header_perfil}>
-                    <AccountCircleIcon sx={{ fontSize: '3.2rem', color: 'rgba(106, 106, 106, 0.61)' }} />
+                <div className={styles.search_profile}>
+                    <SearchIcon sx={{ fontSize: '23px', color: 'rgba(106, 106, 106, 0.61)', cursor: 'pointer' }} />
+                    <AvatarImage name={'Gabriel Matte Elias'} width={34} height={34} />
                 </div>
             </div>
-
-        </header>
+        </header >
     )
 }

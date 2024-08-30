@@ -1,0 +1,46 @@
+.contributors h2 {
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+
+.contributors {
+    margin: 3rem 0;
+
+    border: none;
+    border-top: 1px solid rgb(221, 221, 221);
+    border-bottom: 1px solid rgb(221, 221, 221);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 2.2rem 0;
+}
+
+.contributors_profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 640px) {
+    .project_content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .info {
+        display: flex;
+        gap: 1rem;
+
+        padding-top: 0.5rem;
+
+        color: rgb(34, 34, 34);
+
+        font-size: 1.6rem;
+
+    }
+}
